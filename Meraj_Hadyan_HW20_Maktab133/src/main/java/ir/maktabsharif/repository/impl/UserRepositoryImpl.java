@@ -16,10 +16,17 @@ public class UserRepositoryImpl extends BaseRepositoryImpl<Long, User> implement
 
 
     @Override
-    public Optional<User> findByUserName(String userName){
+    public Optional<User> findByUsername(String username){
         EntityManager em = EntityManagerProvider.getEntityManager();
         User user = em.createQuery("select u from User u where u.username = :un", User.class)
-                .setParameter("un",userName).getSingleResult();
+                .setParameter("un",username).getSingleResult();
+        return Optional.of(user);
+    }
+    @Override
+    public Optional<User> findByEmail(String email){
+        EntityManager em = EntityManagerProvider.getEntityManager();
+        User user = em.createQuery("select u from User u where u.email = :ue", User.class)
+                .setParameter("ue",email).getSingleResult();
         return Optional.of(user);
     }
 

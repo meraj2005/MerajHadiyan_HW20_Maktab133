@@ -1,14 +1,15 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
+import ir.maktabsharif.model.*;
+import ir.maktabsharif.repository.*;
+import ir.maktabsharif.repository.impl.*;
+import ir.maktabsharif.service.*;
+import ir.maktabsharif.service.impl.*;
+import ir.maktabsharif.util.PasswordUtil;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.*;
-import model.User;
-import repository.UserRepository;
-import repository.impl.UserRepositoryImpl;
-import service.UserService;
-import service.impl.UserServiceImpl;
-import util.PasswordUtil;
+
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -92,7 +93,7 @@ public class EditProfileServlet extends HttpServlet {
             user.setPassword(PasswordUtil.hashPassword(newPassword));
         }
 
-        userService.saveOrUpdate(user);
+        userService.update(user);
 
         session.setAttribute("user", user);
         resp.sendRedirect(req.getContextPath() + "/user");

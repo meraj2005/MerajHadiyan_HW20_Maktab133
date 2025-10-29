@@ -1,4 +1,4 @@
-<%@ page import="model.Movie" %><%--
+<%@ page import="ir.maktabsharif.model.Movie" %><%--
   Created by IntelliJ IDEA.
   User: abdol
   Date: 10/26/2025

@@ -1,9 +1,8 @@
-package service.impl;
+package ir.maktabsharif.service.impl;
 
-import model.Movie;
-import model.User;
-import repository.MovieRepository;
-import service.MovieService;
+import ir.maktabsharif.model.*;
+import ir.maktabsharif.repository.*;
+import ir.maktabsharif.service.*;
 
 import java.util.Optional;
 

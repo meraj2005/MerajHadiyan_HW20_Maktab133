@@ -1,0 +1,92 @@
+body {
+    background-color: #989797;
+    color: #333;
+    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px 0;
+}
+
+h1,h2 {
+    color: #000000;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    border-bottom: 3px solid #000000;
+    padding-bottom: 0.5rem;
+    max-width: 800px;
+    margin: 0 auto 1rem auto;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+}
+
+.register-form {
+    width: 400px;
+    margin: 0 auto 1rem auto;
+    padding: 1rem;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    margin-bottom: 0.5rem;
+    margin-right: 0.5rem;
+    font-weight: 600;
+    color: #000000;
+    display: block;
+}
+
+input {
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    cursor: text;
+    outline: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 1rem;
+}
+
+input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+
+.submit-btn {
+    background-color: #000000;
+    color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    font-weight: 700;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #000000;
+}
+
+@media (max-width: 500px) {
+    .register-form {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}

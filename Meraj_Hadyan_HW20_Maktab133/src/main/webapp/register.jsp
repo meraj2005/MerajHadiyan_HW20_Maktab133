@@ -9,13 +9,13 @@
 <html>
 <head>
     <title>Register</title>
-    <link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="css2/register.css">
 </head>
 <body>
 
-<h1>Login</h1>
+<h1>register</h1>
 <form action="register" method="post">
-    <h2>Form User Fields:</h2>
+    <h2>register Fields:</h2>
 
     <div class="register-form">
         <label>Username:</label>
@@ -33,8 +33,10 @@
     </div>
 
     <div class="register-form">
-        <label>Submit Button:</label>
         <button type="submit" class="submit-btn">Register</button>
+        <p class="login">
+            <a href="login">login</a>
+        </p>
     </div>
 
 </form>

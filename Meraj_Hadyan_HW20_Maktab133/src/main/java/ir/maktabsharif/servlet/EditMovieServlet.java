@@ -1,14 +1,15 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
+import ir.maktabsharif.model.*;
+import ir.maktabsharif.repository.*;
+import ir.maktabsharif.repository.impl.*;
+import ir.maktabsharif.service.*;
+import ir.maktabsharif.service.impl.*;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.*;
-import model.Movie;
-import repository.MovieRepository;
-import repository.impl.MovieRepositoryImpl;
-import service.MovieService;
-import service.impl.MovieServiceImpl;
+
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -108,7 +109,7 @@ public class EditMovieServlet extends HttpServlet {
             }
         }
 
-        movieService.saveOrUpdate(movie);
+        movieService.update(movie);
         resp.sendRedirect(req.getContextPath() + "/admin");
 
     }

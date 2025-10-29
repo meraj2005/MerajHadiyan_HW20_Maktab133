@@ -1,15 +1,11 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
+import ir.maktabsharif.model.*;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.User;
-import repository.UserRepository;
-import repository.impl.UserRepositoryImpl;
-import service.UserService;
-import service.impl.UserServiceImpl;
 
 import java.io.IOException;
 import java.io.PrintWriter;

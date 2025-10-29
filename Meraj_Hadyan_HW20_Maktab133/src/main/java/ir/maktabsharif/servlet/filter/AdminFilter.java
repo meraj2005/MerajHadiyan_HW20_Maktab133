@@ -1,12 +1,13 @@
-package servlet.filter;
+package ir.maktabsharif.servlet.filter;
 
+import ir.maktabsharif.enums.Role;
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.Role;
-import model.User;
+import ir.maktabsharif.model.*;
+
 
 import java.io.IOException;
 

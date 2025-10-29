@@ -21,7 +21,13 @@ public class BaseServiceImpl<ID , T extends BaseModel<ID> , R extends BaseReposi
         }
         return null;
     }
-
+    @Override
+    public T update(T type){
+        if (type != null) {
+            return baseRepository.update(type);
+        }
+        return null;
+    }
 
     @Override
     public boolean deleteById(ID id) {

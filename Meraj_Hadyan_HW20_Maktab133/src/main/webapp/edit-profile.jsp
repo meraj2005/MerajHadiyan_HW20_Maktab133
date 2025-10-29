@@ -1,4 +1,4 @@
-<%@ page import="model.User" %><%--
+<%@ page import="ir.maktabsharif.model.User" %><%--
   Created by IntelliJ IDEA.
   User: abdol
   Date: 10/26/2025
@@ -11,7 +11,7 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Edit Profile</title>
-    <link rel="stylesheet" href="css/edit-profile.css">
+    <link rel="stylesheet" href="css2/edit-profile.css">
 </head>
 <body>
 <div class='container'>

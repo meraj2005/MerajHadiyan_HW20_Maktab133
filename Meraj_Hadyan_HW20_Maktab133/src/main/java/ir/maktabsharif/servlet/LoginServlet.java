@@ -1,5 +1,12 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
+import ir.maktabsharif.enums.Role;
+import ir.maktabsharif.model.*;
+import ir.maktabsharif.repository.*;
+import ir.maktabsharif.repository.impl.*;
+import ir.maktabsharif.service.*;
+import ir.maktabsharif.service.impl.*;
+import ir.maktabsharif.util.PasswordUtil;
 import jakarta.persistence.NoResultException;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
@@ -7,13 +14,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.Role;
-import model.User;
-import repository.UserRepository;
-import repository.impl.UserRepositoryImpl;
-import service.UserService;
-import service.impl.UserServiceImpl;
-import util.PasswordUtil;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -40,7 +40,7 @@ public class LoginServlet extends HttpServlet {
         String password = req.getParameter("password");
         User user;
         try {
-            user = userService.findByUserName(username);
+            user = userService.findByUsername(username);
         }catch (NoResultException e){
             writer.println("<h1 style=\"color:red\">This username and password cannot find!</h1>");
             return;

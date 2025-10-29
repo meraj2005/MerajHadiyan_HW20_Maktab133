@@ -1,11 +1,11 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.User;
+import ir.maktabsharif.model.User;
 
 import java.io.IOException;
 

@@ -8,7 +8,8 @@ import java.util.Optional;
 public interface BaseService <ID, T extends BaseModel<ID>> {
     T save(T type);
 
-    T Update (T type);
+    T update (T type);
+
     boolean deleteById (ID id);
 
     Optional<T> findById (ID id);

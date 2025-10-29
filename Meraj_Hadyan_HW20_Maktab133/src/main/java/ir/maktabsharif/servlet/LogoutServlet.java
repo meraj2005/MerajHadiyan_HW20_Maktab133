@@ -1,4 +1,4 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;

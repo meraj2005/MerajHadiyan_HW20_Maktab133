@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>User Panel</title>
-    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css2/user.css">
 </head>
 <body>
 <section class="Introduction">

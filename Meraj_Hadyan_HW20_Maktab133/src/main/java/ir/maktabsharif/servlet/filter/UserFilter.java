@@ -1,11 +1,11 @@
-package servlet.filter;
+package ir.maktabsharif.servlet.filter;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
-import model.User;
+import ir.maktabsharif.model.User;
 
 import java.io.IOException;
 

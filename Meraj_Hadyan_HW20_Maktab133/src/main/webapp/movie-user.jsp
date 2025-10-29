@@ -1,5 +1,5 @@
-<%@ page import="model.User" %>
-<%@ page import="model.Movie" %>
+<%@ page import="ir.maktabsharif.model.User" %>
+<%@ page import="ir.maktabsharif.model.Movie" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: abdol

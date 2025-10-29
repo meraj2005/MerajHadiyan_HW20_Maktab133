@@ -1,15 +1,16 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
+import ir.maktabsharif.model.*;
+import ir.maktabsharif.repository.*;
+import ir.maktabsharif.repository.impl.*;
+import ir.maktabsharif.service.*;
+import ir.maktabsharif.service.impl.*;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.UserMovie;
-import repository.UserMovieRepository;
-import repository.impl.UserMovieRepositoryImpl;
-import service.UserMovieService;
-import service.impl.UserMovieServiceImpl;
+
 
 import java.io.IOException;
 import java.io.PrintWriter;

@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    background-color: #989797;
     color: #333;
     line-height: 1.6;
 }
@@ -23,6 +23,7 @@ body {
     padding-bottom: 0.5rem;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 
 .navigation {
     background-color: rgba(255, 255, 255, 0.9);

@@ -34,7 +34,7 @@ public abstract class BaseRepositoryImpl<ID, T extends BaseModel<ID>> implements
 
     @Override
     public T update(T type){
-        EntityManager em = EntityManagerProvider.getEntityManager();
+        EntityManager em =EntityManagerProvider.getEntityManager();
         EntityTransaction transaction = em.getTransaction();
         try {
             transaction.begin();

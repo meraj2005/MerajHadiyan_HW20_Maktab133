@@ -1,4 +1,4 @@
-package util;
+package ir.maktabsharif.util;
 
 import at.favre.lib.crypto.bcrypt.BCrypt;
 

@@ -1,25 +1,15 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
+import ir.maktabsharif.model.*;
+import ir.maktabsharif.repository.*;
+import ir.maktabsharif.repository.impl.*;
+import ir.maktabsharif.service.*;
+import ir.maktabsharif.service.impl.*;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.Movie;
-import model.User;
-import model.UserMovie;
-import repository.MovieRepository;
-import repository.UserMovieRepository;
-import repository.UserRepository;
-import repository.impl.MovieRepositoryImpl;
-import repository.impl.UserMovieRepositoryImpl;
-import repository.impl.UserRepositoryImpl;
-import service.MovieService;
-import service.UserMovieService;
-import service.UserService;
-import service.impl.MovieServiceImpl;
-import service.impl.UserMovieServiceImpl;
-import service.impl.UserServiceImpl;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -69,7 +59,7 @@ public class UserMovieServlet extends HttpServlet {
             return;
         }
 
-        userMovieService.saveOrUpdate(UserMovie.builder().user(user).movie(movie).build());
+        userMovieService.save(UserMovie.builder().user(user).movie(movie).build());
         writer.println("<h1 style='color: green'> <b>Movie added to your watchlist.</b></h1>");
         writer.println("<a href='index.jsp'>Go Back</a>");
     }

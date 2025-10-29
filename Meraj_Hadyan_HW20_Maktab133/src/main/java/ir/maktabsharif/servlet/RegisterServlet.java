@@ -1,17 +1,17 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
+import ir.maktabsharif.enums.Role;
+import ir.maktabsharif.model.*;
+import ir.maktabsharif.repository.*;
+import ir.maktabsharif.repository.impl.*;
+import ir.maktabsharif.service.*;
+import ir.maktabsharif.service.impl.*;
+import ir.maktabsharif.util.PasswordUtil;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.Role;
-import model.User;
-import repository.UserRepository;
-import repository.impl.UserRepositoryImpl;
-import service.UserService;
-import service.impl.UserServiceImpl;
-import util.PasswordUtil;
 
 import java.io.IOException;
 
@@ -36,7 +36,7 @@ public class RegisterServlet extends HttpServlet {
         String password = req.getParameter("password");
         String email = req.getParameter("email");
         password = PasswordUtil.hashPassword(password);
-        userService.saveOrUpdate(User.builder().username(username).email(email).password(password).role(Role.USER).build());
+        userService.save(User.builder().username(username).email(email).password(password).role(Role.USER).build());
         resp.sendRedirect(req.getContextPath() + "/login");
     }
 }

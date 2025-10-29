@@ -1,9 +1,10 @@
-package service.impl;
+package ir.maktabsharif.service.impl;
 
+import ir.maktabsharif.model.*;
+import ir.maktabsharif.repository.*;
+import ir.maktabsharif.service.*;
 import jakarta.persistence.NoResultException;
-import model.User;
-import repository.UserRepository;
-import service.UserService;
+
 
 import java.util.Optional;
 
@@ -14,10 +15,21 @@ public class UserServiceImpl extends BaseServiceImpl<Long, User, UserRepository>
 
 
     @Override
-    public User findByUserName(String userName){
-        Optional<User> userOptional = baseRepository.findByUserName(userName);
-        if (userOptional.isPresent())
+    public User findByUsername(String username) {
+        Optional<User> userOptional = baseRepository.findByUsername(username);
+        if (userOptional.isPresent()) {
             return userOptional.get();
-        throw new NoResultException("User with this username not Found!");
+        } else {
+            throw new NoResultException("User with this username not Found!");
+        }
+    }
+    @Override
+    public User findByEmail(String email){
+        Optional<User> userOptional = baseRepository.findByEmail(email);
+        if ((userOptional.isPresent())){
+            return userOptional.get();
+        }else {
+            throw new NoResultException("User with this Email not Found!");
+        }
     }
 }

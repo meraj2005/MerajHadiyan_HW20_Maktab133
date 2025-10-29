@@ -1,15 +1,16 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
+import ir.maktabsharif.model.*;
+import ir.maktabsharif.repository.*;
+import ir.maktabsharif.repository.impl.*;
+import ir.maktabsharif.service.*;
+import ir.maktabsharif.service.impl.*;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import model.Movie;
-import repository.MovieRepository;
-import repository.impl.MovieRepositoryImpl;
-import service.MovieService;
-import service.impl.MovieServiceImpl;
+
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -41,7 +42,7 @@ public class MovieServlet extends HttpServlet {
         }
 
         Integer durationConverted = Integer.parseInt(duration);
-        movieService.saveOrUpdate(Movie.builder().title(title).Genre(genre).Duration(durationConverted).build());
+        movieService.save(Movie.builder().title(title).Genre(genre).Duration(durationConverted).build());
 
 
         writer.println("<h1 style='color: green'> <b>Movie added successfully.</b> </h1>");

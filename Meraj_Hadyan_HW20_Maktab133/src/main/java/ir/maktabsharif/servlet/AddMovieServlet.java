@@ -1,15 +1,14 @@
-package servlet;
+package ir.maktabsharif.servlet;
 
+import ir.maktabsharif.model.*;
+import ir.maktabsharif.repository.*;
+import ir.maktabsharif.repository.impl.*;
+import ir.maktabsharif.service.*;
+import ir.maktabsharif.service.impl.*;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.http.*;
-import model.Movie;
-import model.User;
-import repository.MovieRepository;
-import repository.impl.MovieRepositoryImpl;
-import service.MovieService;
-import service.impl.MovieServiceImpl;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -62,7 +61,9 @@ public class AddMovieServlet extends HttpServlet {
             moviePicture = picturePart.getInputStream().readAllBytes();
         }
 
-        movieService.saveOrUpdate(Movie.builder().title(title).description(description).releaseDate(LocalDate.parse(releaseDate)).Genre(genre).rating(Double.parseDouble(rating)).Duration(Integer.parseInt(duration)).moviePicture(moviePicture).build());
+        movieService.save(Movie.builder().title(title).description(description).releaseDate(LocalDate.parse(releaseDate))
+                .Genre(genre).rating(Double.parseDouble(rating)).Duration(Integer.parseInt(duration))
+                .moviePicture(moviePicture).build());
         resp.sendRedirect(req.getContextPath() + "/admin");
     }
 }
