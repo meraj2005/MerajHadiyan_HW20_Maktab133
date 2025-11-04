@@ -39,9 +39,18 @@ public class AllMovieUserServlet extends HttpServlet {
 
         List<Movie> movies = movieService.findAll();
         List<Movie> watchlistMovie = userMovieService.findMovieByUsernameId(user.getId());
+        //Genre
+        String category = request.getParameter("category");
+
+        if(category != null && !category.isEmpty()){
+            movies=movieService.filterGenreMovie(category);
+        }
+        request.setAttribute("movies", movies);
+        request.setAttribute("selectedCategory", category);
+
 
         request.setAttribute("user",user);
-        request.setAttribute("movies",movies);
+
         request.setAttribute("watchlist",watchlistMovie);
 
         request.getRequestDispatcher("movie-user.jsp").forward(request,response);

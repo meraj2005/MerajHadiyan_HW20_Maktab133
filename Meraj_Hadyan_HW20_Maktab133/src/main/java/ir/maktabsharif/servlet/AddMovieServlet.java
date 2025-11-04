@@ -12,6 +12,7 @@ import jakarta.servlet.http.*;
 
 import java.io.IOException;
 import java.time.LocalDate;
+import java.util.List;
 
 
 @MultipartConfig(
@@ -31,6 +32,7 @@ public class AddMovieServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+
 
         response.sendRedirect(request.getContextPath()+"/add-movie.jsp");
 

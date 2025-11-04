@@ -13,6 +13,7 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 public class UserMovieServlet extends HttpServlet {
     private UserRepository userRepository;
@@ -68,8 +69,20 @@ public class UserMovieServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html");
         PrintWriter writer = resp.getWriter();
+        List<Movie> movies=movieService.findAll();
 
         String userId = req.getParameter("user_id");
+
+        //Genre
+        String category = req.getParameter("category");
+
+        if(category != null && !category.isEmpty()){
+            movies=movieService.filterGenreMovie(category);
+        }
+        req.setAttribute("movies", movies);
+        req.setAttribute("selectedCategory", category);
+
+        req.getRequestDispatcher("/movie-user.jsp").forward(req, resp);
 
         if (userId == null) {
             writer.println("<h1 style='color: red'>userID is required!</h1>");

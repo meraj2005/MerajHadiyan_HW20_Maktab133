@@ -24,12 +24,11 @@ public class Movie extends BaseModel<Long> implements Serializable {
     private Integer Duration;
     private LocalDate releaseDate;
     private Double rating;
-
     @Lob
     private byte[] moviePicture;
 
     @ToString.Exclude
-    @OneToMany(mappedBy = "movie", cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+    @OneToMany(mappedBy = "movie", cascade = {CascadeType.PERSIST, CascadeType.REMOVE})
     private List<UserMovie> userMovies = new ArrayList<>();
 
 
@@ -39,4 +38,7 @@ public class Movie extends BaseModel<Long> implements Serializable {
         }
         return null;
     }
+
+    @OneToMany(mappedBy = "movie", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Review> reviews;
 }

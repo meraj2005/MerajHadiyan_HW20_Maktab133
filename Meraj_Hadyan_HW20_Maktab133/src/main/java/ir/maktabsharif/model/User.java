@@ -39,6 +39,9 @@ public class User extends BaseModel<Long> implements Serializable {
         }
         return null;
     }
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<Review> reviews = new ArrayList<>();
+
 
 
 }

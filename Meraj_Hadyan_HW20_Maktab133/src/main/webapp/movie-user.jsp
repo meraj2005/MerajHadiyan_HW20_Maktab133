@@ -13,9 +13,22 @@
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <title>Movie Library</title>
-    <link rel="stylesheet" href="css/movie-user.css">
+    <link rel="stylesheet" href="css2/movie-user.css">
 </head>
 <body>
+
+<form action="<%=request.getContextPath() + "/movie-user"%>" method="get" class="filter-form">
+    <label for="category">Filter by Category:</label>
+    <select name="category" id="category" onchange="this.form.submit()">
+        <option value="">All</option>
+        <option value="Action" <%= "Action".equals(request.getAttribute("selectedCategory")) ? "selected" : "" %>>Action</option>
+        <option value="Comedy" <%= "Comedy".equals(request.getAttribute("selectedCategory")) ? "selected" : "" %>>Comedy</option>
+        <option value="Drama" <%= "Drama".equals(request.getAttribute("selectedCategory")) ? "selected" : "" %>>Drama</option>
+        <option value="Horror" <%= "Horror".equals(request.getAttribute("selectedCategory")) ? "selected" : "" %>>Horror</option>
+        <option value="Sci-Fi" <%= "Sci-Fi".equals(request.getAttribute("selectedCategory")) ? "selected" : "" %>>Sci-Fi</option>
+    </select>
+</form>
+
 
 
 <div class='header'>
@@ -100,6 +113,9 @@
         <%
             }
         %>
+        <a href="<%=request.getContextPath()%>/movie-details?movieId=<%=movie.getId()%>"
+           class="btn btn-info" style="margin-left:10px;">View Details</a>
+
 
     </div>
     <hr class='hr-divider'>

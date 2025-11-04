@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="css2/admin.css">
 </head>
 <body>
 <section class="Introduction">

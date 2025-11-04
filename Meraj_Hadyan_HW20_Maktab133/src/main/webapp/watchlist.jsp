@@ -15,6 +15,17 @@
     <link rel="stylesheet" href="css/watchlist.css">
 </head>
 <body>
+<form action="<%=request.getContextPath() + "/watchlist"%>" method="get" class="filter-form">
+    <label for="category">Filter by Category:</label>
+    <select name="category" id="category" onchange="this.form.submit()">
+        <option value="">All</option>
+        <option value="Action" <%= "Action".equals(request.getAttribute("selectedCategory")) ? "selected" : "" %>>Action</option>
+        <option value="Comedy" <%= "Comedy".equals(request.getAttribute("selectedCategory")) ? "selected" : "" %>>Comedy</option>
+        <option value="Drama" <%= "Drama".equals(request.getAttribute("selectedCategory")) ? "selected" : "" %>>Drama</option>
+        <option value="Horror" <%= "Horror".equals(request.getAttribute("selectedCategory")) ? "selected" : "" %>>Horror</option>
+        <option value="Sci-Fi" <%= "Sci-Fi".equals(request.getAttribute("selectedCategory")) ? "selected" : "" %>>Sci-Fi</option>
+    </select>
+</form>
 
 <div class='header'>
     <h1 class='page-title'>💚My Watchlist</h1>

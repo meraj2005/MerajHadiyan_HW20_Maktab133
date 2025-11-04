@@ -175,3 +175,11 @@ body {
     color: #999;
     margin-bottom: 5px;
 }
+.filter-form {
+    margin: 15px;
+}
+.filter-form select {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}

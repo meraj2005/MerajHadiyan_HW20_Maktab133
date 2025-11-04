@@ -78,8 +78,10 @@
     <servlet-name>EditMovieServlet</servlet-name>
     <servlet-class>ir.maktabsharif.servlet.EditMovieServlet</servlet-class>
   </servlet>
-
-
+  <servlet>
+    <servlet-name>MovieDetailsServlet</servlet-name>
+    <servlet-class>ir.maktabsharif.servlet.MovieDetailsServlet</servlet-class>
+  </servlet>
   <!-- ******************************************************************************** -->
 
   <servlet-mapping>
@@ -151,6 +153,10 @@
   <servlet-mapping>
     <servlet-name>DeleteUserMovieServlet</servlet-name>
     <url-pattern>/delete-user-movies</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>MovieDetailsServlet</servlet-name>
+    <url-pattern>/movie-details</url-pattern>
   </servlet-mapping>
 
   <welcome-file-list>

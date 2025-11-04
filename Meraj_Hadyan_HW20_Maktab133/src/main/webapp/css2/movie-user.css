@@ -119,3 +119,11 @@ body {
     color: #ffc107;
     font-weight: bold;
 }
+.filter-form {
+    margin: 15px;
+}
+.filter-form select {
+    padding: 6px 10px;
+    border-radius: 8px;
+    font-size: 14px;
+}

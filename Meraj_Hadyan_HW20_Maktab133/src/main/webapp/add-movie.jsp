@@ -42,15 +42,11 @@
                 <label for='genre'>Genre</label>
                 <select id='genre' name='genre' required>
                     <option value=''>Select Genre</option>
-                    <option value='Science Fiction'>Science Fiction</option>
                     <option value='Action'>Action</option>
                     <option value='Drama'>Drama</option>
                     <option value='Comedy'>Comedy</option>
                     <option value='Horror'>Horror</option>
-                    <option value='Romance'>Romance</option>
-                    <option value='Thriller'>Thriller</option>
-                    <option value='Adventure'>Adventure</option>
-                    <option value='Fantasy'>Fantasy</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
                 </select>
             </div>
 

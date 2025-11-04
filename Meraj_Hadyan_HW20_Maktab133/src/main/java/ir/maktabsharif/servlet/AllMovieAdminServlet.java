@@ -32,10 +32,21 @@ public class AllMovieAdminServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
+
         HttpSession session = request.getSession(false);
         User user = (User) session.getAttribute("user");
 
         List<Movie> movies = movieService.findAll();
+        //Genre
+        String category = request.getParameter("category");
+
+        if(category != null && !category.isEmpty()){
+            movies=movieService.filterGenreMovie(category);
+        }
+        request.setAttribute("movies", movies);
+        request.setAttribute("selectedCategory", category);
+
+
 
         request.setAttribute("user",user);
         request.setAttribute("movies",movies);

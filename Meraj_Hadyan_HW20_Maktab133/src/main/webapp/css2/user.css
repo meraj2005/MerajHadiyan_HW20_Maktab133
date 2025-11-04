@@ -16,10 +16,10 @@ body {
 }
 
 .Introduction h1 {
-    color: #213c57;
+    color: #000000;
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
-    border-bottom: 3px solid #213c57;
+    border-bottom: 3px solid #000000;
     padding-bottom: 0.5rem;
     text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
@@ -34,7 +34,7 @@ body {
 }
 
 h2 {
-    color: #213c57;
+    color: #000000;
     font-size: 1.8rem;
     padding-bottom: 1rem;
 }
@@ -61,12 +61,12 @@ h2 {
 
 .link-card a {
     text-decoration: none;
-    color: #2c3e50;
+    color: #000000;
     font-weight: 600;
     font-size: 1.1rem;
     display: block;
 }
 
 .link-card a:hover {
-    color: #3498db;
+    color: #989797;
 }
